@@ -81,7 +81,7 @@ namespace TaskSplitter11
                 using var shortcut = new WindowsShortcut
                 {
                     Path = splitterExeLocation,
-                    Arguments = "--gui",
+                    Arguments = $"--gui --launcher \"{Application.ExecutablePath}\"",
                     IconLocation = iconPath
                 };
                 shortcut.Save(linkLocation);
